@@ -106,3 +106,26 @@
 
 ```
 
+
+
+### Issue
+
+- `InfoAgreement.js`
+
+  - html tag를 multiple string에 넣으면 layout이 깨짐
+
+    css 적용 
+
+    react component로 대체 
+
+- `MedicalConfirmation.js`
+
+  - Parsing error: Adjacent JSX elements must be wrapped in an enclosing tag
+
+    div로 감싸서 해결
+
+  - 기본 markdown은 cell merge 지원을 안함
+
+    최대한 cell merge를 줄이게끔 flexibility 주기
+
+  - 기본 table layout은 markdown 형식으로 잡아놓고 그 안의 값들을 react component로 대체
