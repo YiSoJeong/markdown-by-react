@@ -2,7 +2,12 @@ import React from 'react';
 import './App.css';
 import Markdown from 'markdown-to-jsx';
 
-const userInfoTitle = `#### 개인정보 수집 및 활용 동의서(선택)`
+const userInfoTitle = `
+#### 개인정보 수집 및 활용 동의서(선택)
+
+<input type="radio" name="user" value="agree"/> 개인정보 수집, 활용에 동의함
+<input type="radio" name="user" value="disagree"/> 개인정보 수집, 활용에 동의하지 않음
+`
 
 const userInfoContent = `
 - 수집하는 기본 개인정보 항목 : 성명(이종현) / 연락처(010-000-0000) / 주소(대한민국)
@@ -39,14 +44,13 @@ const closing = `
   덴트웹치과의원 귀하
 `
 
-function App() {
+function InfoAgreement() {
   return (
     <div className="Agreement">
 
       <div className="userInfoAgreement">
         <Markdown children={userInfoTitle}/>
-        <input type="radio" name="user" value="agree"/> 개인정보 수집, 활용에 동의함
-        <input type="radio" name="user" value="disagree"/> 개인정보 수집, 활용에 동의하지 않음
+
         <Markdown children={userInfoContent}/>
       </div>
 
@@ -95,4 +99,4 @@ function App() {
   );
 }
 
-export default App;
+export default InfoAgreement;

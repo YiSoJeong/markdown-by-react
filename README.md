@@ -51,7 +51,15 @@
   <Markdown children={mdfile}/>
   ```
 
-  
+
+
+> 변수를 삽입하고 싶을 경우 : ${변수명} 형식사용
+>
+> ```react
+> <Markdown>{`- ${value}`}</Markdown>
+> ```
+
+
 
 - #### HTML Tag의 표현을 Override하기
 
@@ -83,11 +91,18 @@
   
   /*
       renders:
-   
+     
       <div class="foo">
           Hello World
       </div>
    */
   ```
 
-  
+
+
+#### 	case 2 : 임의의 React Component 렌더링
+
+```react
+
+```
+
