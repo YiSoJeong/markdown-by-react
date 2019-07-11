@@ -34,17 +34,46 @@ const notice =`
 
 ※ 만 14세 미만 아동인 경우 반드시 법적대리인의 동의가 필요합니다.
 `
+const closing = `
+  ####2019년 06월 21일
+  덴트웹치과의원 귀하
+`
 
 function App() {
   return (
     <div className="Agreement">
     <Markdown children={userInfoTitle}/>
+    <input type="radio" name="user" value="agree"/> 개인정보 수집, 활용에 동의함
+    <input type="radio" name="user" value="disagree"/> 개인정보 수집, 활용에 동의하지 않음
     <Markdown children={userInfoContent}/>
     <Markdown children={videoInfoTitle}/>
+    <input type="radio" name="video" value="agree"/> 영상정보 수집에 동의함
+    <input type="radio" name="video" value="disagree"/> 영상정보 수집에 동의하지 않음
     <Markdown children={videoInfoContent}/>
     <Markdown children={thirdPartyTitle}/>
+    <input type="radio" name="thirdParty" value="agree"/> 개인정보 제3자 제공에 동의함
+    <input type="radio" name="thirdParty" value="disagree"/> 개인정보 제3자 제공에 동의하지 않음
     <Markdown children={thirdPartyContent}/>
     <Markdown children={notice}/>
+    <button type="button"> 전체 동의 </button>
+    <br/>
+    법정대리인 성명 <input type="text" name="fname"/>
+    연락처 <input type="text" name="lname"/>
+
+    법정대리인 관계
+    <select>
+      <option value="parent">부모</option>
+      <option value="grandparent">조부모</option>
+      <option value="any">아무</option>
+      <option value="who">누구</option>
+    </select>
+
+    <br/>
+    <Markdown children={closing}/>
+    <br/>
+    <button type="button"> 저장 </button>
+    <button type="button"> 취소 </button>
+    
     </div>
   );
 }

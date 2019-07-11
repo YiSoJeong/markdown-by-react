@@ -1,30 +1,29 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 
-const MyParagraph = ({ children, ...props }) => (
-    <div {...props}>{children}</div>
-);
- 
-function Test() {
-    return(
-        <Markdown
-        options={{
-            overrides: {
-                h1: {
-                    component: MyParagraph,
-                    props: {
-                        className: 'foo',
-                    },
-                },
-            },
-        }}
-    >
-        # Hello world!
-    </Markdown>
-    );
-}
+// const Button = ({ children, ...props }) => (
+//     <button type="radio" {...props}>{children}</button>
+// );
 
-export default Test;
+// const Button = () => (
+//     <input type="radio">
+// );
+ 
+// function Test() {
+//     return(
+//     <Markdown
+//         options={{
+//             overrides: {
+//                 h1: Button,
+//             },
+//         }}
+//     >
+//         # Hello world!
+//     </Markdown>
+//     );
+// }
+
+// export default Test;
 
 /*
     renders:
