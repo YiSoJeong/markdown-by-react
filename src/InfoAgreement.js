@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Markdown from 'markdown-to-jsx';
 
 const userInfoTitle = `
